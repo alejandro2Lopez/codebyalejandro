@@ -14,8 +14,9 @@
 
 <body class="d-flex overflow-x-hidden flex-column gap-5 ms-xl-9 ms-xxl-9 me-xl-9 me-xxl-9 mt-2"
   style="/*padding-bottom: calc(106px + env(safe-area-inset-bottom));*/">
-  <nav class="navbar fixed-top bg-body justify-content-center align-content-center nav-small-dev" id="top-nav"
-    style="border-width: 1px;border-bottom-style: solid;">
+  <nav
+    class="navbar fixed-top bg-body d-print-none d-xl-none d-xxl-none justify-content-center align-content-center nav-small-dev"
+    id="top-nav" style="border-width: 1px;border-bottom-style: solid;">
     <div class="container-fluid">
       <div class="row g-0 d-flex vw-100 flex-row justify-content-center gap-5">
         <div class="col d-flex align-items-end align-content-center">
@@ -74,7 +75,8 @@
       </div>
     </div>
   </nav>
-  <ul class="nav nav-pills z-3 bottom-nav" id="bottom-nav" style="border-top: 0.25px solid rgb(58,58,58);">
+  <ul class="nav nav-pills d-print-none d-xl-none d-xxl-none z-3 bottom-nav" id="bottom-nav"
+    style="border-top: 0.25px solid rgb(58,58,58);">
     <li class="nav-item"><a class="nav-link active" href="#aboutme" data-section="sec-aboutme"><svg
           xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -145,7 +147,7 @@
             <div class="col-auto col-xl col-xxl"><button class="btn btn-lg w-100 contact-trigger btn-prin" type="button"
                 style="border-radius: 24px;background: #baf5ff;border-width: 1px;border-color: rgba(0,0,0,0.24);">Contáctame</button>
             </div>
-            <div class="col-auto col-lg col-xl col-xxl"><a href="#projects"><button class="btn btn-lg w-100 btn-project"
+            <div class="col-auto col-lg col-xl col-xxl"><a href="#proyects"><button class="btn btn-lg w-100 btn-project"
                   type="button"
                   style="border-radius: 24px;background: #EFEFEF;border-color: rgba(0,0,0,0.24);">Proyectos</button></a>
             </div>
@@ -260,8 +262,9 @@
                 experiencia del usuario médico mediante interfaces accesibles, base de datos optimizada y consultas
                 eficientes</p>
               <div class="row">
-                <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm abrir-item-3" href="#"
-                    style="color: rgb(255,255,255);background: #fe9797;border-radius: 24px;">Ver más</a></div>
+                <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm abrir-item-3 ir-a-item" href="#item-3"
+                    style="color: rgb(255,255,255);background: #fe9797;border-radius: 24px;"
+                    data-collapse-target="item-3">Ver más</a></div>
                 <div class="col"><a class="ps-3 pe-3 btn btn-sm btn-light btn-sec-cnci"
                     style="border-radius: 30px;background: rgb(255,229,226);" data-bs-target="#galeriaModalCNCI"
                     data-bs-toggle="modal">Ver imágenes</a></div>
@@ -270,11 +273,12 @@
             <div class="d-block d-md-none d-flex flex-column justify-content-end p-3 card-overlay-CARD-CNCI">
               <p class="lead text-white"></p>
               <div class="row d-flex flex-row gap-2">
-                <div class="col"><a class="link-dark w-100 ps-3 pe-3 btn btn-sm abrir-item-3" href="#"
-                    style="color: rgb(255,255,255);background: #fe9797;border-radius: 24px;">Ver más</a></div>
-                <div class="col-auto"><a class="ps-3 pe-3 btn btn-sm btn-light" data-bs-target="#galeriaModalCNCI"
-                    data-bs-toggle="modal"
-                    style="border-radius: 30px;background: rgb(255,229,226);">Ver imágenes</a></div>
+                <div class="col"><a class="link-dark w-100 ps-3 pe-3 btn btn-sm ir-a-item" href="#item-3"
+                    style="color: rgb(255,255,255);background: #fe9797;border-radius: 24px;"
+                    data-collapse-target="item-3">Ver más</a></div>
+                <div class="col-auto"><a class="ps-3 pe-3 btn btn-sm btn-light" href="#"
+                    style="border-radius: 30px;background: rgb(255,229,226);" data-bs-toggle="modal"
+                    data-bs-target="#galeriaModalCNCI">Ver imágenes</a></div>
               </div>
             </div>
           </div>
@@ -290,8 +294,10 @@
                   estudiantil, utilizando Deno, PostgreSQL, React y autenticación SSO. Apliqué principios de UI/UX,
                   modelado de base de datos y control de versiones con Git, cubriendo todo el ciclo de desarrollo</p>
                 <div class="row">
-                  <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm abrir-item-1" href="#"
-                      style="color: rgb(255,255,255);background: #74a3fb;border-radius: 24px;">Ver más</a></div>
+                  <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm ir-a-item" href="#item-1"
+                      style="color: rgb(255,255,255);background: #74a3fb;border-radius: 24px;"
+                      data-collapse-target="item-1">Ver más<span class="d-none me-2 spinner-border spinner-border-sm"
+                        role="status" aria-hidden="true"></span></a></div>
                   <div class="col"><a class="ps-3 pe-3 btn btn-sm btn-light btn-sec-cci" href="#"
                       style="border-radius: 30px;background: rgb(226,240,255);" data-bs-toggle="modal"
                       data-bs-target="#galeriaModal">Ver imágenes</a></div>
@@ -300,10 +306,10 @@
               <div class="d-block d-md-none d-flex flex-column justify-content-end p-3 card-overlay-CARD-CCI">
                 <p class="lead text-white"></p>
                 <div class="row d-flex flex-row gap-2">
-                  <div class="col"><a class="link-dark w-100 ps-3 pe-3 btn btn-sm abrir-item-1"
-                      style="color: rgb(255,255,255);background: #a8c6ff;border-radius: 24px;" data-bs-target="">Ver
-                      más</a></div>
-                  <div class="col-auto"><a class="ps-3 pe-3 btn btn-sm btn-light" 
+                  <div class="col"><a class="link-dark w-100 ps-3 pe-3 btn btn-sm ir-a-item"
+                      style="color: rgb(255,255,255);background: #a8c6ff;border-radius: 24px;" href="#item-1"
+                      data-collapse-target="item-1">Ver más</a></div>
+                  <div class="col-auto"><a class="ps-3 pe-3 btn btn-sm btn-light" href="#"
                       style="border-radius: 30px;background: rgb(226,240,255);" data-bs-toggle="modal"
                       data-bs-target="#galeriaModal">Ver imágenes</a></div>
                 </div>
@@ -407,7 +413,7 @@
       </div>
       <div class="row ms-auto ms-sm-1 me-auto me-sm-1">
         <div class="col">
-          <div class="accordion" role="tablist" id="accordion-1" style="border-radius: 24px;">
+          <div class="accordion accordion-flush" role="tablist" id="accordion-1" style="border-radius: 24px;">
             <div class="accordion-item" style="border-top-left-radius: 24px;border-top-right-radius: 24px;">
               <h2 class="accordion-header" role="tab"><button class="accordion-button d-flex align-items-center"
                   type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true"
@@ -470,7 +476,7 @@
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button"
+              <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed d-flex" type="button"
                   data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false"
                   aria-controls="accordion-1 .item-3"
                   style="border-width: 1px;border-style: solid;border-bottom-right-radius: 24px!important;border-bottom-left-radius: 24px!important;"><img
