@@ -15,14 +15,14 @@
 <body class="d-flex overflow-x-hidden flex-column gap-5 ms-xl-9 ms-xxl-9 me-xl-9 me-xxl-9 mt-2"
   style="/*padding-bottom: calc(106px + env(safe-area-inset-bottom));*/">
   <nav
-    class="navbar fixed-top bg-body d-print-none d-xl-none d-xxl-none justify-content-center align-content-center nav-small-dev"
+    class="navbar fixed-top bg-body d-flex d-print-none d-sm-flex d-md-flex d-lg-flex d-xl-none d-xxl-none justify-content-center align-content-center"
     id="top-nav" style="border-width: 1px;border-bottom-style: solid;">
     <div class="container-fluid">
-      <div class="row g-0 d-flex vw-100 flex-row justify-content-center gap-5">
-        <div class="col d-flex align-items-end align-content-center">
-          <p class="d-flex">Alejandro López</p>
+      <div class="row g-0 d-flex vw-100 flex-row justify-content-between gap-3">
+        <div class="col-auto d-flex justify-content-center align-items-center align-content-center">
+          <p class="w-100">Alejandro <br>López</p>
         </div>
-        <div class="col">
+        <div class="col-auto d-flex align-items-center">
           <ul class="navbar-nav d-flex flex-row justify-content-center align-items-center gap-4 social-icons">
             <li class="nav-item d-flex align-items-center"><a class="nav-link active"
                 href="https://api.whatsapp.com/send/?phone=+50689542552&amp;text=Hola,%20estimado%20Alejandro Lopez,%20espero%20se%20encuentre%20muy%20bien"><img
@@ -36,6 +36,27 @@
                   src="assets/img/icons8-linkedin-48.png" width="32" height="32"></a></li>
           </ul>
         </div>
+        <div class="col-auto d-flex align-items-center">
+          <div class="d-flex align-items-center">
+            <div class="dropdown">
+              <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="bandera-idioma" src="assets/img/es.png" width="24" alt="Idioma actual" />
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" onclick="setIdioma('es')">
+                    <img src="assets/img/es.png" width="24" class="me-2" alt="Español" /> Español
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" onclick="setIdioma('en')">
+                    <img src="assets/img/en.png" width="24" class="me-2" alt="English" /> English
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -48,16 +69,19 @@
           navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navcol-1">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#aboutme" data-section="sec-aboutme">Sobre mi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills" data-section="sec-skills">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link d-flex" href="#projects" data-section="sec-projects">Proyectos</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#experienceEducation"
-              data-section="sec-experienceEducation">Experiencia / Educación</a></li>
-          <li class="nav-item"><a class="nav-link contact-trigger" href="#">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link"
+          <li class="nav-item"><a class="nav-link active" href="#aboutme" data-section="sec-aboutme"
+              data-i18n="link_about_me">Sobre mi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills" data-section="sec-skills"
+              data-i18n="link_skill">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link d-flex" href="#projects" data-section="sec-projects"
+              data-i18n="link_project">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experienceEducation" data-section="sec-experienceEducation"
+              data-i18n="link_educ_exp">Experiencia /Educación</a></li>
+          <li class="nav-item"><a class="nav-link contact-trigger" href="#" data-i18n="link_contact">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link contact-trigger"
               href="https://bweenuyuwknostqrmvuf.supabase.co/storage/v1/object/public/my-portafolio//CV_Desarrollador%20de%20software_Alejandro%20Francisco%20Lopez%20Lopez.pdf"
-              download="" target="_blank">Ver CV</a></li>
+              data-i18n="link_CV" download="" target="_blank"><span
+                style="color: RGBA(var(--bs-emphasis-color-rgb),var(--bs-link-opacity,.75));">Ver CV</span></a></li>
         </ul>
       </div>
       <div class="collapse navbar-collapse d-flex flex-grow-0 justify-content-end gap-1" id="navcol-2">
@@ -73,6 +97,27 @@
                 width="28" height="28"></a></li>
         </ul>
       </div>
+      <div class="col-auto d-flex justify-content-end align-items-end">
+        <div class="d-flex align-items-center">
+          <div class="dropdown">
+            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="bandera-idioma" src="assets/img/es.png" width="24" alt="Idioma actual" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item d-flex align-items-center" onclick="setIdioma('es')">
+                  <img src="assets/img/es.png" width="24" class="me-2" alt="Español" /> Español
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" onclick="setIdioma('en')">
+                  <img src="assets/img/en.png" width="24" class="me-2" alt="English" /> English
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   <ul class="nav nav-pills d-print-none d-md-flex d-xl-none d-xxl-none z-3 bottom-nav" id="bottom-nav"
@@ -85,7 +130,7 @@
           <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
           <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
         </svg>
-        <p>Sobre mi</p>
+        <p data-i18n="link_about_me">Sobre mi</p>
       </a></li>
     <li class="nav-item"><a class="nav-link" href="#skills" data-section="sec-skills"><svg
           xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"
@@ -95,7 +140,7 @@
             d="M7 5h10v2h2V3c0-1.1-.9-1.99-2-1.99L7 1c-1.1 0-2 .9-2 2v4h2V5zm8.41 11.59L20 12l-4.59-4.59L14 8.83 17.17 12 14 15.17l1.41 1.42zM10 15.17L6.83 12 10 8.83 8.59 7.41 4 12l4.59 4.59L10 15.17zM17 19H7v-2H5v4c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-4h-2v2z">
           </path>
         </svg>
-        <p>Habilidades</p>
+        <p data-i18n="link_skill">Habilidades</p>
       </a></li>
     <li class="nav-item"><a class="nav-link" href="#projects" data-section="sec-projects"><svg
           xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="icon-size">
@@ -103,7 +148,7 @@
             d="M17 5.5H20C21.1046 5.5 22 6.39543 22 7.5V19.5C22 20.6046 21.1046 21.5 20 21.5H4C2.89543 21.5 2 20.6046 2 19.5V7.5C2 6.39543 2.89543 5.5 4 5.5H7C7 3.84315 8.34315 2.5 10 2.5H14C15.6569 2.5 17 3.84315 17 5.5ZM14 4.5H10C9.44772 4.5 9 4.94772 9 5.5H15C15 4.94772 14.5523 4.5 14 4.5ZM20 7.5H4V9.5H20V7.5ZM4 19.5V11.5H7V13.5H11V11.5H13V13.5H17V11.5H20V19.5H4Z"
             fill="currentColor"></path>
         </svg>
-        <p>Proyectos</p>
+        <p data-i18n="link_project">Proyectos</p>
       </a></li>
     <li class="nav-item"><a class="nav-link" href="#experienceEducation" data-section="sec-experienceEducation"><svg
           xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor"
@@ -116,7 +161,7 @@
           </path>
         </svg>
         <p>Exp/Educ</p>
-        <div id="toast" class="toast-msg">Descargando currículum...</div>
+        <div id="toast" class="toast-msg" data-i18n="cv_download">Descargando currículum...</div>
       </a></li>
     <li class="nav-item"><a class="nav-link" onclick="descargarCV()"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
           height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -132,8 +177,8 @@
   </ul>
   <main class="d-flex overflow-x-hidden flex-column gap-5" style="padding-top: 56px;">
     <section class="gap-2" id="sec-aboutme" style="padding-bottom: 28px;padding-top: 28px;">
-      <div class="row gap-1 gap-xl-5 gap-xxl-5 m-0 m-xl-5 m-xxl-5 mt-5">
-        <div class="col-md-6 d-flex align-items-center">
+      <div class="row d-flex gap-1 gap-xl-5 gap-xxl-5 m-0 m-xl-0 m-xxl-5 mt-5">
+        <div class="col-md-6 d-flex justify-content-center align-items-center align-content-center">
           <div class="d-flex flex-row align-items-center gap-2 gallery-row">
             <div class="img-box side-img"><img class="img-fluid" alt="black and white laptop computer" width="1080"
                 height="1620" src="assets/img/photo-1624996752380-8ec242e0f85d.jpg"></div>
@@ -143,22 +188,23 @@
                 height="1620" src="assets/img/photo-1607706009771-de8808640bcf.jpg"></div>
           </div>
         </div>
-        <div class="col align-self-center me-0 me-sm-7 me-xl-8 me-xxl-8 mt-2">
+        <div class="col align-self-center me-0 me-sm-7 me-md-1 me-xl-4 me-xxl-4 mt-2">
           <div class="row">
             <div class="col">
-              <h1 style="/*min-width: 32px;*//*max-width: 124px;*/"><br>Imagino sin límites, desarrollo sin fronteras
-              </h1><label class="form-label">Transformo ideas en soluciones de software reales, eficientes y
-                escalables. Desde el concepto hasta el lanzamiento, doy vida a tu visión.</label>
+              <h1 style="/*min-width: 32px;*//*max-width: 124px;*/" data-i18n="about_title"><br>Imagino sin límites,
+                desarrollo sin fronteras</h1><label class="form-label" data-i18n="about_descrip">Transformo ideas en
+                soluciones de software reales, eficientes y escalables. Desde el concepto hasta el lanzamiento, doy vida
+                a tu visión.</label>
             </div>
           </div>
           <div class="row g-0 gap-2 gap-sm-3 gap-md-2 gap-lg-3 gap-xl-4 gap-xxl-4 mt-4">
             <div class="col-auto col-xl col-xxl"><button class="btn btn-lg w-100 contact-trigger btn-prin" type="button"
-                style="border-radius: 24px;background: #4196ff;border: 1px none rgba(0,0,0,0.24);color: #ffffff;">Contáctame</button>
-            </div>
+                style="border-radius: 24px;background: #4196ff;border: 1px none rgba(0,0,0,0.24);color: #ffffff;"
+                data-i18n="about_btn_cont">Contáctame</button></div>
             <div class="col-auto col-lg col-xl col-xxl"><a href="#projects"><button class="btn btn-lg w-100 btn-project"
                   type="button"
-                  style="border-radius: 24px;background: #EFEFEF;border-style: none;border-color: rgba(0,0,0,0.24);border-top-style: none;">Proyectos</button></a>
-            </div>
+                  style="border-radius: 24px;background: #EFEFEF;border-style: none;border-color: rgba(0,0,0,0.24);border-top-style: none;"
+                  data-i18n="about_btn_proy">Proyectos</button></a></div>
           </div>
         </div>
       </div>
@@ -169,21 +215,21 @@
           class="col order-last order-sm-last order-md-last order-xl-first order-xxl-first ms-0 ms-sm-0 ms-md-0 ms-lg-0 ms-xl-6 ms-xxl-6 mt-2">
           <div class="row me-3">
             <div class="col ms-0">
-              <h1 id="aboutme"><br>Sobre mí</h1><label class="form-label"><br>Soy desarrollador <strong>full
-                  stack</strong> con experiencia en crear soluciones web <strong>robustas y escalables</strong>. Me
-                especializo en tecnologías modernas, tanto en frontend como en backend, y aplico <strong>metodologías
-                  ágiles</strong> para entregar productos alineados con los <strong>objetivos del
-                  negocio</strong>.</label>
+              <h1 id="aboutme" data-i18n="about_title_2"><br>Sobre mí</h1><label class="form-label"
+                data-i18n="about_descrip_2"><br>Soy desarrollador <strong>full stack</strong> con experiencia en crear
+                soluciones web <strong>robustas y escalables</strong>. Me especializo en tecnologías modernas, tanto en
+                frontend como en backend, y aplico <strong>metodologías ágiles</strong> para entregar productos
+                alineados con los <strong>objetivos del negocio</strong>.</label>
             </div>
           </div>
           <div class="row mt-4">
             <div class="col"><button class="btn btn-lg w-100 contact-trigger btn-prin" type="button"
-                style="border-radius: 24px;background: #4196ff;border: 1px none rgba(0,0,0,0.24);color: #ffffff;">Contáctame</button>
-            </div>
+                style="border-radius: 24px;background: #4196ff;border: 1px none rgba(0,0,0,0.24);color: #ffffff;"
+                data-i18n="about_btn_cont">Contáctame</button></div>
             <div class="col"></div>
           </div>
         </div>
-        <div class="col-md-6 order-sm-first order-md-first order-xl-last order-xxl-last me-8">
+        <div class="col-md-6 order-sm-first order-md-first order-xl-last order-xxl-last me-8 me-xl-5">
           <div class="row overflow-auto flex-nowrap">
             <div class="col d-flex justify-content-end pt-2 img-wrapper"><img
                 class="object-fit-cover w-100 mb-4 zoom-img" alt="macbook air on white table"
@@ -201,15 +247,15 @@
     <section class="d-flex flex-column gap-2 m-5" id="sec-skills">
       <div class="row">
         <div class="col">
-          <h1 class="text-center align-items-center" id="skills">Habilidades Técnicas</h1>
+          <h1 class="text-center align-items-center" id="skills" data-i18n="skill_title">Habilidades Técnicas</h1>
         </div>
       </div>
       <div class="row d-flex justify-content-center ms-0 ms-xl-6 ms-xxl-6 me-xl-6 me-xxl-6">
-        <div class="col-12 text-center ms-xl-9 ms-xxl-9 me-xl-9 me-xxl-9"><label class="col-form-label">Soy
-            desarrollador <strong>full stack</strong> con experiencia en crear soluciones web <strong>robustas y
-              escalables</strong>. Me especializo en tecnologías modernas, tanto en frontend como en backend, y aplico
-            <strong>metodologías ágiles</strong> para entregar productos alineados con los <strong>objetivos del
-              negocio</strong>.</label></div>
+        <div class="col-12 text-center ms-xl-9 ms-xxl-9 me-xl-9 me-xxl-9"><label class="col-form-label"
+            data-i18n="skill_descrip">Soy desarrollador <strong>full stack</strong> con experiencia en crear soluciones
+            web <strong>robustas y escalables</strong>. Me especializo en tecnologías modernas, tanto en frontend como
+            en backend, y aplico <strong>metodologías ágiles</strong> para entregar productos alineados con los
+            <strong>objetivos del negocio</strong>.</label></div>
       </div>
       <div class="row d-flex justify-content-center align-items-center gap-4">
         <div class="col-auto"
@@ -231,12 +277,14 @@
           style="border-radius: 24px;background: rgba(255,255,255,0);border-width: 1px;border-style: none;"><button
             class="btn btn-outline-dark ps-4 pe-4 btn-filtro" type="button"
             style="border-radius: 24px;background: #ffffff;border-color: rgba(0,0,0,0.24);"
-            onclick="filtrarTecnologias('Herramientas', this)">Herramientas</button></div>
+            onclick="filtrarTecnologias('Herramientas', this)" data-i18n="skill_opt_tool">Herramientas</button>
+        </div>
         <div class="col-auto"
           style="border-radius: 24px;background: rgba(255,255,255,0);border-width: 1px;border-style: none;"><button
             class="btn btn-outline-dark ps-4 pe-4 btn-filtro" type="button"
             style="border-radius: 24px;background: #ffffff;border-color: rgba(0,0,0,0.24);"
-            onclick="filtrarTecnologias('Metodologías', this)">Metodologías</button></div>
+            onclick="filtrarTecnologias('Metodologías', this)" data-i18n="skill_opt_met">Metodologías</button>
+        </div>
       </div>
       <div class="row gap-4 mt-3">
         <div class="col">
@@ -244,7 +292,7 @@
         </div>
       </div>
     </section>
-    <section class="d-flex justify-content-center align-items-center mt-3 cta-banner" id="sec-projects"
+    <section class="d-flex align-items-center align-content-center mt-3 cta-banner" id="sec-projects"
       style="border-width: 1px;border-style: none;"><video allowfullscreen frameborder="0" scrolling="no"
         allow="encrypted-media" allowtransparency="true" autoplay muted loop playsinline width="100%" height="100%">
 
@@ -254,41 +302,49 @@
         Tu navegador no soporta video.
 
       </video class="cta-content">
-      <h2 id="projects">¿Listo para crear algo increíble juntos?</h2><button class="btn btn-lg contact-trigger btn-prin"
-        type="button"
-        style="border-radius: 24px;background: #4196ff;box-shadow: 0 4px 8px rgba(0,0,0,.20);border: 1px none rgba(0,0,0,0.24);color: #ffffff;">Hablemos</button>
-      </div>
+      <h2 id="projects" data-i18n="banner_title">¿Listo para crear algo increíble juntos?</h2><button
+        class="btn btn-lg contact-trigger btn-prin" type="button"
+        style="border-radius: 24px;background: #4196ff;box-shadow: 0 4px 8px rgba(0,0,0,.20);border: 1px none rgba(0,0,0,0.24);color: #ffffff;"
+        data-i18n="btn_call_second_action">Hablemos</button></div>
     </section>
     <section class="mb-3" id="sec-projects">
       <div class="row">
         <div class="col">
-          <h1 class="text-center align-items-center" id="projects">Proyectos</h1>
+          <h1 class="text-center align-items-center" id="projects" data-i18n="project_title">Proyectos</h1>
         </div>
       </div>
       <div class="row d-flex justify-content-center ms-xl-6 ms-xxl-6 me-xl-6 me-xxl-6">
-        <div class="col text-center ms-4 ms-xl-9 ms-xxl-9 me-4 me-xl-9 me-xxl-9"><label class="col-form-label">Estos
-            proyectos reflejan mi enfoque en crear software útil, mantenible y orientado a resultados reales.</label>
-        </div>
+        <div class="col text-center ms-4 ms-xl-9 ms-xxl-9 me-4 me-xl-9 me-xxl-9"><label class="col-form-label"
+            data-i18n="project_descrip">Estos proyectos reflejan mi enfoque en crear software útil, mantenible y
+            orientado a resultados reales.</label></div>
       </div>
       <div class="row ms-auto me-auto">
         <div class="col">
           <div class="card position-relative overflow-hidden custom-card"
             style="background: rgba(255,209,176,0.7);border-radius: 24px;">
-            <div class="card-body"><img class="img-fluid" src="assets/img/img-des-caja.svg" width="486" height="371">
-            </div>
+            <div class="card-body d-flex flex-column gap-2"><img class="img-fluid" src="assets/img/img-des-caja.svg"
+                width="486" height="371"></div>
             <div class="d-none d-md-block d-flex flex-column justify-content-end p-3 card-overlay-CARD-CNCI">
-              <h1 class="text-white" style="/*display: none;*/text-shadow: 0.5px 0.5px 1px rgba(28,28,28,0.81);">Centro
-                Nacional de Intoxicaciones</h1>
-              <p class="text-truncate text-white">Desarrollo full stack con C# y .NET, enfocado en mejorar la
-                experiencia del usuario médico mediante interfaces accesibles, base de datos optimizada y consultas
-                eficientes</p>
-              <div class="row">
-                <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm abrir-item-3 ir-a-item" href="#item-3"
-                    style="color: rgb(255,255,255)!important;background: #fe4343;border-radius: 24px;"
-                    data-collapse-target="item-3">Ver más</a></div>
-                <div class="col"><a class="ps-3 pe-3 btn btn-sm btn-light btn-sec-cnci"
-                    style="border-radius: 30px;background: rgb(255,229,226);" data-bs-target="#galeriaModalCNCI"
-                    data-bs-toggle="modal">Ver imágenes</a></div>
+              <div class="row d-flex flex-column gap-3">
+                <div class="col">
+                  <h1 class="text-white"
+                    style="/*display: none;*/text-shadow: 0.5px 0.5px 1px rgba(28,28,28,0.81);width: 494.5px;height: 96px;"
+                    data-i18n="card_title_1">Centro Nacional de Intoxicaciones</h1>
+                  <p class="text-truncate text-white" data-i18n="card_descrip_1">Desarrollo full stack con C# y .NET,
+                    enfocado en mejorar la experiencia del usuario médico mediante interfaces accesibles, base de datos
+                    optimizada y consultas eficientes</p>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm abrir-item-3 ir-a-item"
+                        href="#item-3"
+                        style="color: rgb(255,255,255)!important;background: #fe4343;border-radius: 24px;"
+                        data-collapse-target="item-3" data-i18n="card_btn_more">Ver más</a></div>
+                    <div class="col"><a class="ps-3 pe-3 btn btn-sm btn-light btn-sec-cnci"
+                        style="border-radius: 30px;background: rgb(255,229,226);" data-bs-target="#galeriaModalCNCI"
+                        data-bs-toggle="modal" data-i18n="card_btn_view">Ver imágenes</a></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="d-block d-md-none d-flex flex-column justify-content-end p-3 card-overlay-CARD-CNCI">
@@ -296,10 +352,10 @@
               <div class="row d-flex flex-row gap-2">
                 <div class="col"><a class="link-dark w-100 ps-3 pe-3 btn btn-sm ir-a-item" href="#item-3"
                     style="background: #fe4343;border-radius: 24px;color: white!important;"
-                    data-collapse-target="item-3">Ver más</a></div>
+                    data-collapse-target="item-3" data-i18n="card_btn_more">Ver más</a></div>
                 <div class="col"><a class="w-100 ps-3 pe-3 btn btn-sm btn-light" href="#"
                     style="border-radius: 30px;background: rgb(255,229,226);" data-bs-toggle="modal"
-                    data-bs-target="#galeriaModalCNCI">Ver imágenes</a></div>
+                    data-bs-target="#galeriaModalCNCI" data-i18n="card_btn_view">Ver imágenes</a></div>
               </div>
             </div>
           </div>
@@ -309,19 +365,29 @@
             style="background: rgb(195,224,251);border-radius: 24px;">
             <div class="card-body"><img class="img-fluid" src="assets/img/img-dev-cci%20(1).svg" width="486" height="">
               <div class="d-none d-md-block d-flex flex-column justify-content-end p-3 card-overlay-CARD-CCI">
-                <h1 class="text-white" style="text-shadow: 0.25px 0.25px 1px rgba(28,28,28,0.81);">Centro Cultural de
-                  Idiomas De Grecia</h1>
-                <p class="text-truncate text-white">Diseño y desarrollo full stack de una plataforma web para gestión
-                  estudiantil, utilizando Deno, PostgreSQL, React y autenticación SSO. Apliqué principios de UI/UX,
-                  modelado de base de datos y control de versiones con Git, cubriendo todo el ciclo de desarrollo</p>
-                <div class="row">
-                  <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm ir-a-item btn-item-cci" href="#item-1"
-                      style="color: rgb(255,255,255)!important;background: #2569e8;border-radius: 24px;"
-                      data-collapse-target="item-1">Ver más<span class="d-none me-2 spinner-border spinner-border-sm"
-                        role="status" aria-hidden="true"></span></a></div>
-                  <div class="col"><a class="ps-3 pe-3 btn btn-sm btn-light btn-sec-cci" href="#"
-                      style="border-radius: 30px;background: rgb(226,240,255);" data-bs-toggle="modal"
-                      data-bs-target="#galeriaModal">Ver imágenes</a></div>
+                <div class="row d-flex flex-column gap-3">
+                  <div class="col">
+                    <h1 class="text-white"
+                      style="text-shadow: 0.25px 0.25px 1px rgba(28,28,28,0.81);width: 494.5px;height: 96px;"
+                      data-i18n="card_title_2">Centro Cultural de Idiomas De Grecia</h1>
+                    <p class="text-truncate text-white" data-i18n="card_descrip_2">Diseño y desarrollo full stack de una
+                      plataforma web para gestión estudiantil, utilizando Deno, PostgreSQL, React y autenticación SSO.
+                      Apliqué principios de UI/UX, modelado de base de datos y control de versiones con Git, cubriendo
+                      todo el ciclo de desarrollo</p>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-auto"><a class="link-dark ps-3 pe-3 btn btn-sm ir-a-item btn-item-cci"
+                          href="#item-1"
+                          style="color: rgb(255,255,255)!important;background: #2569e8;border-radius: 24px;"
+                          data-collapse-target="item-1" data-i18n="card_btn_more">Ver más<span
+                            class="d-none me-2 spinner-border spinner-border-sm" role="status"
+                            aria-hidden="true"></span></a></div>
+                      <div class="col"><a class="ps-3 pe-3 btn btn-sm btn-light btn-sec-cci" href="#"
+                          style="border-radius: 30px;background: rgb(226,240,255);" data-bs-toggle="modal"
+                          data-bs-target="#galeriaModal" data-i18n="card_btn_view">Ver imágenes</a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="d-block d-md-none d-flex flex-column justify-content-end p-3 card-overlay-CARD-CCI">
@@ -329,10 +395,10 @@
                 <div class="row d-flex flex-row gap-2">
                   <div class="col"><a class="link-dark w-100 ps-3 pe-3 btn btn-sm ir-a-item"
                       style="color: rgb(255,255,255)!important;background: #2569e8;border-radius: 24px;" href="#item-1"
-                      data-collapse-target="item-1">Ver más</a></div>
+                      data-collapse-target="item-1" data-i18n="card_btn_more">Ver más</a></div>
                   <div class="col"><a class="w-100 ps-3 pe-3 btn btn-sm btn-light" href="#"
                       style="border-radius: 30px;background: rgb(226,240,255);" data-bs-toggle="modal"
-                      data-bs-target="#galeriaModal">Ver imágenes</a></div>
+                      data-bs-target="#galeriaModal" data-i18n="card_btn_view">Ver imágenes</a></div>
                 </div>
               </div>
             </div>
@@ -424,47 +490,50 @@
     <section class="d-flex flex-column gap-3" id="sec-experienceEducation">
       <div class="row">
         <div class="col">
-          <h1 class="text-center align-items-center" id="experienceEducation"><br>Experiencia Laboral</h1>
+          <h1 class="text-center align-items-center" id="experienceEducation" data-i18n="experience_title">
+            <br>Experiencia Laboral
+          </h1>
         </div>
       </div>
       <div class="row d-flex justify-content-center ms-auto ms-xl-6 ms-xxl-6 me-xl-6 me-xxl-6">
-        <div class="col text-center ms-2 ms-xl-6 ms-xxl-6 me-2 me-xl-9 me-xxl-9"><label
-            class="col-form-label">Trayectoria trabajando en el desarrollo de soluciones tecnológicas, desde el análisis
-            de requerimientos hasta la implementación de aplicaciones web escalables.</label></div>
+        <div class="col text-center ms-2 ms-xl-6 ms-xxl-6 me-2 me-xl-9 me-xxl-9"><label class="col-form-label"
+            data-i18n="experience_descrip">Trayectoria trabajando en el desarrollo de soluciones tecnológicas, desde el
+            análisis de requerimientos hasta la implementación de aplicaciones web escalables.</label></div>
       </div>
       <div class="row ms-auto ms-sm-1 me-auto me-sm-1">
-        <div class="col">
+        <div class="col z-0">
           <div class="accordion accordion-flush" role="tablist" id="accordion-1" style="border-radius: 24px;">
             <div class="accordion-item" style="border-top-left-radius: 24px;border-top-right-radius: 24px;">
               <h2 class="accordion-header" role="tab"><button class="accordion-button d-flex align-items-center"
                   type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true"
                   aria-controls="accordion-1 .item-1"
-                  style="border-top-left-radius: 24px!important;border-top-right-radius: 24px!important;border: 1px solid rgb(177,177,177) ;"><img
-                    src="assets/img/logoCCI_O.png" width="48" height="48">&nbsp; &nbsp;Centro Cultural de Idiomas de
-                  Grecia&nbsp; &nbsp;<label
+                  style="border-top-left-radius: 24px!important;border-top-right-radius: 24px!important;border: 1px solid rgb(177,177,177) ;"
+                  data-i18n=""><img src="assets/img/logoCCI_O.png" width="48" height="48">&nbsp; &nbsp;<label
+                    class="form-label d-flex justify-content-center" data-i18n="experience_first_name">Centro Cultural
+                    de Idiomas de Grecia</label>&nbsp; &nbsp;<label
                     class="form-label text-end justify-content-center align-items-center align-content-end align-self-start">13/04/2025
                     – 06/06/2025</label></button></h2>
               <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-1"
                 id="item-1">
                 <div class="accordion-body">
-                  <p class="mb-0">Trabajando como freelance diseñé y desarrollé una plataforma web completa para la
-                    gestión de estudiantes, abarcando backend (Deno js,&nbsp;PostgreSQL, SSO con JWT), frontend (React,
-                    TypeScript, HTML, CSS, JavaScript, jQuery) y control de versiones con Git, siguiendo principios de
-                    UI/UX y cubriendo todo el ciclo de desarrollo de software.
+                  <p class="mb-0" data-i18n="experience_first">Trabajando como freelance diseñé y desarrollé una
+                    plataforma web completa para la gestión de estudiantes, abarcando backend (Deno js,&nbsp;PostgreSQL,
+                    SSO con JWT), frontend (React, TypeScript, HTML, CSS, JavaScript, jQuery) y control de versiones con
+                    Git, siguiendo principios de UI/UX y cubriendo todo el ciclo de desarrollo de software.
                     ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br></p>
                   <ul>
-                    <li>Diseñé y desarrollé una plataforma web para la gestión de estudiantes, cubriendo todas las
-                      etapas del ciclo de &nbsp;desarrollo de software.&nbsp;<br>Realicé el levantamiento de
-                      requerimientos funcionales y no funcionales, asegurando una base sólida para la implementación.
-                    </li>
-                    <li>Modelé la base de datos relacional en PostgreSQL e implementé procedimientos almacenados para
-                      garantizar la integridad y seguridad de los datos.</li>
-                    <li>Implementé autenticación de usuarios con soporte para inicio de sesión único (SSO),
-                      fortaleciendo la seguridad del sistema.<br>Construí el frontend aplicando principios de UI/UX,
-                      utilizando HTML, CSS, JavaScript y jQuery para ofrecer una interfaz intuitiva y<br>responsiva.
-                    </li>
-                    <li>Utilicé Git para el control de versiones y gestión del código fuente durante todo el desarrollo
-                      del proyecto.</li>
+                    <li data-i18n="experience_first_point_1">Diseñé y desarrollé una plataforma web para la gestión de
+                      estudiantes, cubriendo todas las etapas del ciclo de &nbsp;desarrollo de
+                      software.&nbsp;<br>Realicé el levantamiento de requerimientos funcionales y no funcionales,
+                      asegurando una base sólida para la implementación.</li>
+                    <li data-i18n="experience_first_point_2">Modelé la base de datos relacional en PostgreSQL e
+                      implementé procedimientos almacenados para garantizar la integridad y seguridad de los datos.</li>
+                    <li data-i18n="experience_first_point_3">Implementé autenticación de usuarios con soporte para
+                      inicio de sesión único (SSO), fortaleciendo la seguridad del sistema.<br>Construí el frontend
+                      aplicando principios de UI/UX, utilizando HTML, CSS, JavaScript y jQuery para ofrecer una interfaz
+                      intuitiva y<br>responsiva.</li>
+                    <li data-i18n="experience_first_point_3">Utilicé Git para el control de versiones y gestión del
+                      código fuente durante todo el desarrollo del proyecto.</li>
                   </ul>
                 </div>
               </div>
@@ -473,25 +542,27 @@
               <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button"
                   data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false"
                   aria-controls="accordion-1 .item-2" style="border: 1px solid rgb(177,177,177) ;"><img
-                    src="assets/img/1.png" width="48" height="48">&nbsp; &nbsp;Clocky App LTD&nbsp;&nbsp;<label
+                    src="assets/img/1.png" width="48" height="48">&nbsp; &nbsp;<label
+                    class="form-label d-flex justify-content-center" data-i18n="">Clocky App
+                    LTD</label>&nbsp;&nbsp;<label
                     class="form-label text-end justify-content-center align-items-center align-content-end align-self-start">13/06/2023
                     – 19/03/2025</label></button></h2>
               <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                 <div class="accordion-body">
-                  <p class="mb-0">He trabajado en el desarrollo integral de proyectos web con Java y PHP con Lavarel,
-                    abarcando tanto backend como frontend, con un enfoque en crear aplicaciones eficientes, intuitivas y
-                    centradas en el usuario. Me especializo en diseño UX/UI, asegurando que cada solución se adapte a
-                    las necesidades del cliente mediante un trabajo colaborativo y orientado a resultados.&nbsp;<br><br>
-                  </p>
+                  <p class="mb-0" data-i18n="experience_second">He trabajado en el desarrollo integral de proyectos web
+                    con Java y PHP con Lavarel, abarcando tanto backend como frontend, con un enfoque en crear
+                    aplicaciones eficientes, intuitivas y centradas en el usuario. Me especializo en diseño UX/UI,
+                    asegurando que cada solución se adapte a las necesidades del cliente mediante un trabajo
+                    colaborativo y orientado a resultados.&nbsp;<br><br></p>
                   <ul>
-                    <li>Desarrollé funciones serverless en Google Cloud Functions utilizando Java con Maven, expuestas
-                      como APIs eficientes y seguras para consumo interno y externo.</li>
-                    <li>Diseñé e implementé una API que unificó los canales de comunicación del cliente, mejorando la
-                      integración entre servicios y ofreciendo una experiencia de usuario más fluida y centralizada.
-                    </li>
-                    <li>Construí una API para la gestión eficiente de carga y entrega de imágenes, optimizando los
-                      tiempos de respuesta, el uso de recursos y garantizando una entrega visual más ágil y consistente
-                      para el usuario final.</li>
+                    <li data-i18n="">Desarrollé funciones serverless en Google Cloud Functions utilizando Java con
+                      Maven, expuestas como APIs eficientes y seguras para consumo interno y externo.</li>
+                    <li data-i18n="experience_second_point_2">Diseñé e implementé una API que unificó los canales de
+                      comunicación del cliente, mejorando la integración entre servicios y ofreciendo una experiencia de
+                      usuario más fluida y centralizada.</li>
+                    <li data-i18n="experience_second_point_3">Construí una API para la gestión eficiente de carga y
+                      entrega de imágenes, optimizando los tiempos de respuesta, el uso de recursos y garantizando una
+                      entrega visual más ágil y consistente para el usuario final.</li>
                   </ul>
                 </div>
               </div>
@@ -500,29 +571,31 @@
               <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed d-flex" type="button"
                   data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false"
                   aria-controls="accordion-1 .item-3"
-                  style="border-bottom-right-radius: 24px!important;border-bottom-left-radius: 24px!important;border: 1px solid rgb(177,177,177) ;"><img
-                    src="assets/img/CentronNacionalDeIntoxicaciones.png" width="67" height="75">&nbsp; &nbsp;Centro
-                  Nacional de Intoxicaciones<label
-                    class="form-label text-end justify-content-center align-items-center align-content-end align-self-start">23/04/2025
-                    – 06/01/2024</label></button></h2>
+                  style="border-bottom-right-radius: 24px!important;border-bottom-left-radius: 24px!important;border: 1px solid rgb(177,177,177) ;"
+                  data-i18n=""><img src="assets/img/CentronNacionalDeIntoxicaciones.png" width="67"
+                    height="75">&nbsp;&nbsp;<label class="form-label d-flex justify-content-center"
+                    data-i18n="experience_third_name">Centro Nacional de Intoxicaciones&nbsp; &nbsp;</label><label
+                    class="form-label text-end justify-content-center align-items-center align-content-end align-self-start">&nbsp;
+                    23/04/2025 – 06/01/2024</label></button></h2>
               <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1" id="item-3">
                 <div class="accordion-body">
-                  <p class="mb-0">Proyecto Universitario en el que colaboré en el desarrollo de un sistema para el
-                    Centro Nacional de Intoxicaciones, participando activamente en el levantamiento de requerimientos y
-                    en el diseño optimizado de la base de datos en SQL. Además, me encargué del desarrollo frontend y
-                    backend con tecnologías como C# y .NET, enfocándome en ofrecer una interfaz clara, accesible y
-                    adaptada a las necesidades del personal médico, mejorando así la usabilidad y eficiencia del
-                    sistema.<br><br></p>
+                  <p class="mb-0" data-i18n="experience_third">Proyecto Universitario en el que colaboré en el
+                    desarrollo de un sistema para el Centro Nacional de Intoxicaciones, participando activamente en el
+                    levantamiento de requerimientos y en el diseño optimizado de la base de datos en SQL. Además, me
+                    encargué del desarrollo frontend y backend con tecnologías como C# y .NET, enfocándome en ofrecer
+                    una interfaz clara, accesible y adaptada a las necesidades del personal médico, mejorando así la
+                    usabilidad y eficiencia del sistema.<br><br></p>
                   <ul>
-                    <li>Participé en el levantamiento de requerimientos, enfocándome en comprender las necesidades del
-                      usuario final para asegurar una solución funcional y centrada en la experiencia.</li>
-                    <li>Colaboré en el diseño e implementación de una base de datos relacional optimizada, garantizando
-                      un rendimiento eficiente del sistema.</li>
-                    <li>Desarrollé procedimientos almacenados que mejoraron la velocidad y eficiencia de las consultas.
-                    </li>
-                    <li>Diseñé interfaces gráficas aplicando principios de UX/UI, priorizando la usabilidad,
-                      accesibilidad y navegación intuitiva, lo que resultó en una mejora significativa en la interacción
-                      del usuario con la aplicación.</li>
+                    <li data-i18n="experience_third_point_1">Participé en el levantamiento de requerimientos,
+                      enfocándome en comprender las necesidades del usuario final para asegurar una solución funcional y
+                      centrada en la experiencia.</li>
+                    <li data-i18n="experience_third_point_2">Colaboré en el diseño e implementación de una base de datos
+                      relacional optimizada, garantizando un rendimiento eficiente del sistema.</li>
+                    <li data-i18n="experience_third_point_3">Desarrollé procedimientos almacenados que mejoraron la
+                      velocidad y eficiencia de las consultas.</li>
+                    <li data-i18n="experience_third_point_4">Diseñé interfaces gráficas aplicando principios de UX/UI,
+                      priorizando la usabilidad, accesibilidad y navegación intuitiva, lo que resultó en una mejora
+                      significativa en la interacción del usuario con la aplicación.</li>
                   </ul>
                 </div>
               </div>
@@ -534,13 +607,13 @@
     <section class="d-flex flex-column gap-3" id="sec-experienceEducation">
       <div class="row">
         <div class="col">
-          <h1 class="text-center align-items-center"><br>Educación</h1>
+          <h1 class="text-center align-items-center" data-i18n="education_title"><br>Educación</h1>
         </div>
       </div>
       <div class="row d-flex justify-content-center ms-auto ms-xl-6 ms-xxl-6 me-xl-6 me-xxl-6">
-        <div class="col text-center ms-2 ms-xl-6 ms-xxl-6 me-2 me-xl-9 me-xxl-9"><label
-            class="col-form-label">Comprometido con el <strong>aprendizaje continuo</strong>, mi formación combina
-            teoría, práctica y actualización constante en <strong>tecnologías modernas</strong> del desarrollo
+        <div class="col text-center ms-2 ms-xl-6 ms-xxl-6 me-2 me-xl-9 me-xxl-9"><label class="col-form-label"
+            data-i18n="education_descrip">Comprometido con el <strong>aprendizaje continuo</strong>, mi formación
+            combina teoría, práctica y actualización constante en <strong>tecnologías modernas</strong> del desarrollo
             web.</label></div>
       </div>
       <div class="row d-flex flex-row gap-2 ms-2 ms-sm-2 ms-md-2 me-2 me-sm-2 me-md-2">
@@ -552,8 +625,9 @@
                 <div class="col-auto d-flex align-items-center"><img class="img-fluid"
                     src="assets/img/ESDESIGN_LOGOS-02.png" width="126" height="83"></div>
                 <div class="col">
-                  <h5 class="fw-normal">Master en diseño web multidispositivo UX/UI</h5>
-                  <p>Escuela superior de diseño de Barcelona (2026)</p>
+                  <h5 class="fw-normal" data-i18n="education_first_title">Master en diseño web multidispositivo UX/UI
+                  </h5>
+                  <p data-i18n="education_first_descrip">Escuela superior de diseño de Barcelona (2026)</p>
                 </div>
               </div>
             </div>
@@ -568,7 +642,7 @@
                 <div class="col-auto d-flex align-items-center"><img
                     src="assets/img/scrumstudy-logo-removebg-preview.png" width="106" height="57"></div>
                 <div class="col">
-                  <h5 class="fw-normal">Scrum Fundamentals Certified</h5>
+                  <h5 class="fw-normal" data-i18n="">Scrum Fundamentals Certified</h5>
                   <p>SCRUMstudy&nbsp; (2025)</p>
                 </div>
               </div>
@@ -587,8 +661,9 @@
                         src="assets/img/universidad-de-costa-rica-logo-png_seeklogo-340611.png" width="106"
                         height="101"></div>
                     <div class="col">
-                      <h5 class="fw-normal">Bachillerato en Informática Empresarial</h5>
-                      <p>Universidad de Costa Rica (2020-2024)</p>
+                      <h5 class="fw-normal" data-i18n="education_third_title">Bachillerato en Informática Empresarial
+                      </h5>
+                      <p data-i18n="education_third_descrip">Universidad de Costa Rica (2020-2024)</p>
                     </div>
                   </div>
                 </div>
@@ -604,7 +679,7 @@
       <div class="container py-4 py-lg-5">
         <div class="row justify-content-center">
           <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column order-sm-first">
-            <h3 class="fs-6 text-center text-body">Contáctame</h3>
+            <h3 class="fs-6 text-center text-body" data-i18n="about_btn_cont">Contáctame</h3>
             <ul class="nav d-flex justify-content-center align-items-center gap-1">
               <li class="nav-item d-flex align-items-center"><a class="nav-link active icon-contact"
                   data-bss-hover-animate="pulse"
@@ -621,16 +696,22 @@
             </ul>
           </div>
           <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-lg-start order-lg-last"><a
-              class="link-body-emphasis" href="#">Sobre mí</a><a class="link-body-emphasis" href="#">Habilidades</a><a
-              class="link-body-emphasis" href="#">Proyectos</a><a class="link-body-emphasis" href="#">Experiencia /
-              Educación</a><a class="link-body-emphasis" href="#">Contacto</a></div>
+              class="link-body-emphasis" href="#aboutme" data-i18n="link_about_me" data-section="sec-aboutme">Sobre
+              mí</a><a class="link-body-emphasis" href="#skills" data-i18n="link_skill"
+              data-section="sec-skills">Habilidades</a><a class="link-body-emphasis" href="#projects"
+              data-i18n="link_project" data-section="sec-projects">Proyectos</a><a class="link-body-emphasis"
+              href="#experienceEducation" data-i18n="link_educ_exp" data-section="sec-experienceEducation">Experiencia /
+              Educación</a><a class="link-body-emphasis contact-trigger" href="#"
+              data-i18n="link_contact">Contacto</a><a class="link-body-emphasis"
+              href="https://bweenuyuwknostqrmvuf.supabase.co/storage/v1/object/public/my-portafolio//CV_Desarrollador%20de%20software_Alejandro%20Francisco%20Lopez%20Lopez.pdf"
+              data-i18n="link_CV" download="" target="_blank">Ver CV</a></div>
           <div class="col-sm-4 col-md-3 col-xxl-5 text-center text-lg-start d-flex flex-column">
-            <p class="lead text-center">Desarrollando software con propósito y pasión.</p>
+            <p class="lead text-center" data-i18n="footer_phrase">Desarrollando software con propósito y pasión.</p>
           </div>
         </div>
         <hr>
         <div class="d-flex justify-content-center align-items-center align-content-center pt-3">
-          <p class="mb-0">Copyright © 2025 portafolio Alejandro</p>
+          <p class="mb-0" data-i18n="footer_copy_right">Copyright © 2025 portafolio Alejandro</p>
           <ul class="list-inline mb-0">
             <li class="list-inline-item"><a href="#"></a></li>
             <li class="list-inline-item"><a href="#"></a></li>
@@ -641,9 +722,9 @@
     </footer>
   </section><button class="btn d-flex align-items-center gap-2 contact-trigger" id="fab-contact" type="button"
     style="position: fixed;bottom: 1.5rem;right: 1.5rem;/*z-index: 20;*/border-radius: 50px;padding: .75rem 1.25rem;box-shadow: 0 4px 8px rgba(0,0,0,.20);transition: transform .2s;background: #0251b0;border: 0.5px none #8f8f8f;color: #ffffff;"><i
-      class="far fa-star fas fa-comment-dots icon-chat"></i><span class="d-none d-md-inline">Hablemos</span></button>
+      class="far fa-star fas fa-comment-dots icon-chat"></i><span class="d-none d-md-inline"
+      data-i18n="btn_call_second_action">Hablemos</span></button>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/intro.js/minified/intro.min.js" type="module"></script>
   <script src="assets/js/script.min.js"></script>
 </body>
